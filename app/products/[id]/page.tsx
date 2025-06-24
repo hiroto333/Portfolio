@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowLeft, ExternalLink, Github, Clock, Users, Target, Lightbulb } from "lucide-react"
+import { ArrowLeft, ExternalLink, Github, Clock, Users, Target, Lightbulb, Trophy, AlertTriangle } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -13,204 +13,188 @@ export default function ProductDetailPage() {
   const id = params.id as string
   const [isLoading, setIsLoading] = useState(true)
 
-  // 全プロダクトの詳細データ
   const productDetails = {
     "1": {
-      title: "E-commerce Platform",
-      description: "モダンなECサイトのフロントエンド開発",
+      title: "PUMP",
+      description: "検索リンクメモ管理システム",
       longDescription:
-        "Next.js、TypeScript、Stripe APIを使用して構築したレスポンシブなEコマースプラットフォーム。ユーザーフレンドリーなインターフェースと高��なパフォーマンスを実現しました。商品検索、カート機能、決済処理まで一貫したユーザー体験を提供します。",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS", "Prisma", "PostgreSQL"],
+        "検索リンクごとにメモを記録し、リンクにカーソルを合わせるだけで内容をポップアップ表示。メモは「必要／不必要」で分類でき、必要なリンクには緑色、不必要なリンクには赤色の下線が表示され、視覚的に情報を整理できるChrome拡張機能です。サポーターズ主催のハッカソン（技育CAMP Vol.23 2024年度）で最優秀賞を受賞しました。",
+      technologies: ["JavaScript", "HTML/CSS", "Chrome Extension API", "DOM操作", "Web Scraping"],
+      image: "/placeholder.svg?height=400&width=600",
+      demoUrl: "#",
+      githubUrl: "#",
+      developmentTime: "ハッカソン期間中（48時間）",
+      teamSize: "チーム開発",
+      role: "ポップアップメモ表示機能、下線追加機能の実装、発表資料作成",
+      award: "技育CAMP Vol.23 2024年度 最優秀賞",
+      challenges: [
+        "短期間での役割分担と効率的な開発",
+        "各サイトの構造が異なる中でのスクレイピング実装",
+        "SPAでのキャッシュ問題への対応",
+        "直感的で使いやすいUI設計",
+      ],
+      solutions: [
+        "開発者ツールを活用した各サイトの構造解析とスクレイピング",
+        "直感的に分かりやすいUI（ポップアップの大きさ、線の色・太さ）の設計",
+        "SPAのキャッシュ問題を解決するため毎回読み込む仕組みを実装",
+        "聞く人の視点を考慮したプレゼン資料の作成",
+      ],
+      learnings: [
+        "ユーザー視点の大切さ",
+        "初対面のメンバーとのチーム開発の難しさ",
+        "短期間での集中開発のコツ",
+        "効果的なプレゼンテーション技術",
+      ],
+      results: [
+        "技育CAMP Vol.23 2024年度 最優秀賞受賞",
+        "直感的なUI設計により高いユーザビリティを実現",
+        "効率的な情報整理機能の提供",
+        "チーム開発スキルの向上",
+      ],
+    },
+    "2": {
+      title: "Trive",
+      description: "AI搭載旅行プラン作成アプリ",
+      longDescription:
+        "ユーザーが行きたい市区町村を選択すると地図上に観光スポットがピンで表示され、訪れたい場所を保存できます。各スポットに滞在時間を入力すると、効率的なルートと所要時間が自動で表示され、旅行のしおりの基礎となるプラン（訪問順、滞在時間、移動時間）を作成できるWebアプリケーションです。",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Google Maps API", "JavaScript"],
       image: "/placeholder.svg?height=400&width=600",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "3ヶ月",
-      teamSize: "3人",
-      role: "フロントエンドリード",
+      teamSize: "チーム開発（4人）",
+      role: "リーダー（PM）、バックエンド開発",
       challenges: [
-        "複雑な商品フィルタリング機能の実装",
-        "決済システムとの安全な連携",
-        "大量の商品データの効率的な表示",
-        "モバイルファーストなレスポンシブデザイン",
+        "初めてのチーム開発でのスケジュール管理",
+        "各機能の実装工数の見積もりが困難",
+        "APIの実装と連携",
+        "チームメンバーのスキルレベルの違い",
       ],
       solutions: [
-        "React QueryとVirtual Scrollingによる高速データ表示",
-        "Stripe Elements APIを使用した安全な決済フロー",
-        "Intersection Observer APIを活用した無限スクロール",
-        "Tailwind CSSによる一貫したデザインシステム",
+        "役割分担を明確にし、定期的な進捗確認を実施",
+        "チーム全員が気持ちよく開発できる環境づくり",
+        "Google Maps APIを活用した地図機能の実装",
+        "効率的なルート計算アルゴリズムの設計",
       ],
       learnings: [
-        "大規模なECサイトのアーキテクチャ設計",
-        "決済システムのセキュリティ要件",
-        "パフォーマンス最適化の重要性",
-        "ユーザビリティテストの価値",
+        "チーム開発の難しさと重要性",
+        "プロジェクト管理スキル",
+        "API設計と実装のベストプラクティス",
+        "コミュニケーションの大切さ",
       ],
       results: [
-        "ページ読み込み速度40%向上",
-        "コンバージョン率15%改善",
-        "モバイルユーザビリティスコア95点",
-        "クライアント満足度100%",
-      ],
-    },
-    "2": {
-      title: "Task Management App",
-      description: "チーム向けタスク管理アプリケーション",
-      longDescription:
-        "React、Node.js、MongoDBを使用したリアルタイムコラボレーション機能付きタスク管理ツール。直感的なドラッグ&ドロップインターフェースを実装し、チームの生産性向上を支援します。",
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express", "JWT"],
-      image: "/placeholder.svg?height=400&width=600",
-      demoUrl: "#",
-      githubUrl: "#",
-      developmentTime: "2ヶ月",
-      teamSize: "2人",
-      role: "フルスタック開発者",
-      challenges: [
-        "リアルタイム同期の実装",
-        "ドラッグ&ドロップUIの最適化",
-        "複数ユーザーの同時編集対応",
-        "データの整合性保証",
-      ],
-      solutions: [
-        "Socket.ioによるリアルタイム通信",
-        "React Beautiful DNDライブラリの活用",
-        "楽観的更新とコンフリクト解決機能",
-        "MongoDBトランザクションによるデータ整合性",
-      ],
-      learnings: [
-        "リアルタイムアプリケーションの設計",
-        "WebSocketの効果的な活用方法",
-        "状態管理の複雑性への対処",
-        "ユーザー体験を重視したUI設計",
-      ],
-      results: [
-        "チーム生産性30%向上",
-        "ユーザー満足度4.8/5.0",
-        "月間アクティブユーザー500人達成",
-        "バグ報告件数90%削減",
+        "直感的な地図インターフェースの実現",
+        "効率的な旅行ルート提案機能の完成",
+        "チーム開発経験の獲得",
+        "プロジェクトマネジメントスキルの向上",
       ],
     },
     "3": {
-      title: "Portfolio Website",
-      description: "デザイナー向けポートフォリオサイト",
+      title: "Gravity Four",
+      description: "重力付き四目並べゲーム",
       longDescription:
-        "Gatsby、GraphQL、Contentfulを使用した高速でSEOに最適化されたポートフォリオサイト。アニメーションとインタラクションを重視したデザインで、クリエイターの作品を魅力的に展示します。",
-      technologies: ["Gatsby", "GraphQL", "Contentful", "Framer Motion", "SCSS"],
+        "コマが下から積み上がる重力のルールを再現し、縦・横・斜めのいずれかに4つ揃えたプレイヤーが勝利となる対戦型の重力付き四目並べゲームです。初めての個人開発プロジェクトとして、ゲームロジックから勝敗判定、UI設計まで全て一人で実装しました。",
+      technologies: ["JavaScript", "HTML5 Canvas", "CSS", "ゲームロジック", "アルゴリズム"],
       image: "/placeholder.svg?height=400&width=600",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "1ヶ月",
-      teamSize: "1人",
-      role: "フロントエンド開発者",
+      teamSize: "個人開発",
+      role: "全機能の設計・実装（企画、UI/UX、ゲームロジック、勝敗判定）",
       challenges: [
-        "静的サイトでの動的コンテンツ管理",
-        "高品質な画像の最適化",
-        "SEO対策とパフォーマンス両立",
-        "クリエイティブなアニメーション実装",
+        "初めての開発でコードを書くこと自体が困難",
+        "重力ルールの物理演算実装",
+        "複雑な勝ち負け判定ロジックの実装",
+        "ユーザーフレンドリーなUI設計",
       ],
       solutions: [
-        "ContentfulのHeadless CMSを活用",
-        "Gatsby Image Pluginによる画像最適化",
-        "静的サイト生成によるSEO最適化",
-        "Framer Motionによる滑らかなアニメーション",
+        "段階的な学習アプローチで基礎から習得",
+        "重力付き四目並べの独自ルール設計",
+        "効率的な勝敗判定アルゴリズムの実装",
+        "HTML5 Canvasを活用した滑らかなアニメーション",
       ],
       learnings: [
-        "JAMstackアーキテクチャの理解",
-        "Headless CMSの効果的な活用",
-        "パフォーマンス最適化のベストプラクティス",
-        "アニメーションとUXのバランス",
+        "プログラミングの楽しさと達成感",
+        "ゲーム開発の基礎知識",
+        "アルゴリズム設計の重要性",
+        "個人開発での問題解決能力",
       ],
       results: [
-        "Lighthouse スコア100点達成",
-        "ページ読み込み時間1秒以下",
-        "検索エンジンランキング上位表示",
-        "クライアントからの追加案件獲得",
+        "完全動作する対戦ゲームの完成",
+        "プログラミングスキルの基礎確立",
+        "個人開発の自信獲得",
+        "ゲーム開発への興味の発見",
       ],
     },
     "4": {
-      title: "Mobile App UI",
-      description: "フィットネスアプリのUI/UXデザイン",
+      title: "子どもの「やってみたい」アプリ",
+      description: "子ども向け体験マッチングプラットフォーム",
       longDescription:
-        "React Native、Expo、Figmaを使用したユーザーフレンドリーなモバイルアプリのデザインと開発。健康管理とワークアウト追跡機能を実装し、ユーザーのフィットネス目標達成を支援します。",
-      technologies: ["React Native", "Expo", "Figma", "Redux", "AsyncStorage"],
+        "子どもがショート動画で体験内容を見て「いいね」すると、親に通知が届き、関連する体験イベントが提示されます。気になった体験は保存でき、サブスクリプションに加入すると割引価格で参加可能です。体験提供企業からの広告費を割引原資とし、運営はサブスク収益を得るビジネスモデルです。和歌山大学学生挑戦コンテスト2024 ビジネス部門で企業賞を受賞しました。",
+      technologies: ["ビジネスモデル設計", "UI/UX設計", "収益計画", "プレゼンテーション", "市場分析"],
       image: "/placeholder.svg?height=400&width=600",
       demoUrl: "#",
       githubUrl: "#",
-      developmentTime: "4ヶ月",
-      teamSize: "4人",
-      role: "UI/UX デザイナー・フロントエンド開発者",
-      challenges: ["モバイル特有のUX設計", "複雑なデータ可視化", "オフライン機能の実装", "iOS/Android両対応"],
+      developmentTime: "2ヶ月",
+      teamSize: "チーム開発",
+      role: "発表資料の作成と収益計画の立案",
+      award: "和歌山大学学生挑戦コンテスト2024 ビジネス部門 企業賞",
+      challenges: [
+        "初めてのビジネスプラン策定",
+        "複数のステークホルダーの利益調整",
+        "持続可能な収益モデルの設計",
+        "市場ニーズの正確な把握",
+      ],
       solutions: [
-        "ユーザー調査に基づいたUI設計",
-        "Chart.jsによるインタラクティブなグラフ",
-        "AsyncStorageによるローカルデータ管理",
-        "Expoによるクロスプラットフォーム開発",
+        "Will Can Mustのフレームワークを活用した戦略設計",
+        "利用者・提供者・運営それぞれにとって利益が生まれる仕組みを設計",
+        "ステークホルダー全員がWIN-WINの関係になるビジネスモデル",
+        "詳細な収益計画と市場分析の実施",
       ],
       learnings: [
-        "モバイルアプリのUX設計原則",
-        "データ可視化のベストプラクティス",
-        "React Nativeの特性と制約",
-        "ユーザーテストの重要性",
+        "ビジネスモデル設計の重要性",
+        "ユーザー視点の大切さ",
+        "ステークホルダー分析の手法",
+        "効果的なプレゼンテーション技術",
       ],
-      results: ["App Store評価4.7/5.0", "ダウンロード数10,000回突破", "ユーザー継続率85%", "デザインアワード受賞"],
+      results: [
+        "和歌山大学学生挑戦コンテスト2024 企業賞受賞",
+        "持続可能なビジネスモデルの提案",
+        "ビジネス企画スキルの獲得",
+        "プレゼンテーション能力の向上",
+      ],
     },
     "5": {
-      title: "Dashboard Analytics",
-      description: "データ可視化ダッシュボード",
+      title: "非常持ち出し袋支援システム",
+      description: "災害対策支援研究プロジェクト",
       longDescription:
-        "D3.js、Chart.js、Reactを使用したインタラクティブなデータ可視化ダッシュボード。リアルタイムデータ更新とカスタマイズ可能なウィジェットで、ビジネスインサイトの発見を支援します。",
-      technologies: ["React", "D3.js", "Chart.js", "WebSocket", "Node.js", "Redis"],
+        "ユーザーが作成した非常持ち出し袋では対応できない状況をシステムが提示することで、未考慮の状況に気づきを与える支援システムを提案しました。非常持ち出し袋の選定では、限られた重量内で個人に合った適切な物を選ぶ必要がありますが、物品の種類が膨大で本当に必要なものを判断するのは難しい現状があります。本研究では、この課題に対する新しいアプローチを提案しました。",
+      technologies: ["研究手法", "システム設計", "ユーザビリティ評価", "論文執筆", "データ分析"],
       image: "/placeholder.svg?height=400&width=600",
       demoUrl: "#",
       githubUrl: "#",
-      developmentTime: "2.5ヶ月",
-      teamSize: "3人",
-      role: "フロントエンド開発者",
+      developmentTime: "6ヶ月",
+      teamSize: "個人研究",
+      role: "研究全般（企画・設計・実装・評価・論文執筆）",
       challenges: [
-        "大量データの効率的な可視化",
-        "リアルタイムデータ更新",
-        "カスタマイズ可能なUI設計",
-        "パフォーマンス最適化",
+        "非常持ち出し袋作成に正解がない中での支援方法の模索",
+        "ユーザーに自然に考えてもらう仕組みの設計",
+        "災害シナリオの網羅的な分析",
+        "システムの有効性評価方法の確立",
       ],
       solutions: [
-        "D3.jsによる高性能データ可視化",
-        "WebSocketによるリアルタイム通信",
-        "ドラッグ&ドロップによるウィジェット配置",
-        "仮想化とメモ化によるパフォーマンス向上",
+        "未考慮状況の提示による気づき支援アプローチ",
+        "個人の状況に応じたカスタマイズ機能",
+        "段階的な学習支援システムの設計",
+        "ユーザビリティテストによる検証",
       ],
       learnings: [
-        "データ可視化ライブラリの使い分け",
-        "大量データ処理の最適化手法",
-        "リアルタイムアプリケーションの設計",
-        "ユーザビリティを考慮したダッシュボード設計",
+        "論理的思考力の向上",
+        "研究手法とプロセスの理解",
+        "問題設定と解決アプローチの重要性",
+        "学術的な文章作成スキル",
       ],
-      results: ["データ処理速度70%向上", "ユーザーエンゲージメント50%増加", "意思決定時間40%短縮", "企業導入実績20社"],
-    },
-    "6": {
-      title: "AI Chat Interface",
-      description: "AI搭載チャットインターフェース",
-      longDescription:
-        "OpenAI API、Next.js、TypeScriptを使用したAI搭載チャットアプリケーション。自然言語処理とリアルタイム会話機能を実装し、ユーザーとAIの自然な対話を実現します。",
-      technologies: ["Next.js", "OpenAI API", "TypeScript", "Prisma", "PostgreSQL", "Vercel"],
-      image: "/placeholder.svg?height=400&width=600",
-      demoUrl: "#",
-      githubUrl: "#",
-      developmentTime: "3.5ヶ月",
-      teamSize: "2人",
-      role: "フルスタック開発者",
-      challenges: ["AI APIの効率的な活用", "会話履歴の管理", "レスポンス時間の最適化", "コスト効率的な運用"],
-      solutions: [
-        "OpenAI APIのストリーミング機能活用",
-        "Prismaによる効率的なデータベース設計",
-        "キャッシュ戦略によるレスポンス高速化",
-        "使用量監視とコスト最適化機能",
-      ],
-      learnings: [
-        "AI APIの実践的な活用方法",
-        "会話型UIの設計原則",
-        "APIコスト最適化の重要性",
-        "ユーザープライバシーの配慮",
-      ],
-      results: ["平均レスポンス時間2秒以下", "ユーザー満足度4.6/5.0", "月間会話数100,000回", "API使用コスト30%削減"],
+      results: ["新しい災害対策支援手法の提案", "研究論文の完成", "論理的思考力の大幅な向上", "社会課題解決への貢献"],
     },
   }
 
@@ -278,6 +262,12 @@ export default function ProductDetailPage() {
             <div className="absolute bottom-6 left-6 text-white">
               <h1 className="text-4xl md:text-5xl font-bold mb-2">{product.title}</h1>
               <p className="text-xl opacity-90">{product.description}</p>
+              {product.award && (
+                <div className="flex items-center mt-3">
+                  <Trophy className="w-5 h-5 mr-2 text-yellow-400" />
+                  <span className="text-yellow-400 font-medium">{product.award}</span>
+                </div>
+              )}
             </div>
           </div>
 
@@ -294,7 +284,7 @@ export default function ProductDetailPage() {
             <Card className="bg-white border-gray-200 shadow-lg">
               <CardContent className="p-6 text-center">
                 <Users className="w-8 h-8 mx-auto mb-3 text-green-600" />
-                <h3 className="font-semibold text-black mb-1">チーム規模</h3>
+                <h3 className="font-semibold text-black mb-1">開発体制</h3>
                 <p className="text-gray-600">{product.teamSize}</p>
               </CardContent>
             </Card>
@@ -303,7 +293,7 @@ export default function ProductDetailPage() {
               <CardContent className="p-6 text-center">
                 <Target className="w-8 h-8 mx-auto mb-3 text-purple-600" />
                 <h3 className="font-semibold text-black mb-1">担当役割</h3>
-                <p className="text-gray-600">{product.role}</p>
+                <p className="text-gray-600 text-sm">{product.role}</p>
               </CardContent>
             </Card>
           </div>
@@ -339,7 +329,7 @@ export default function ProductDetailPage() {
               <p className="text-gray-600 leading-relaxed mb-6">{product.longDescription}</p>
 
               <div>
-                <h4 className="font-semibold text-black mb-3">使用技術</h4>
+                <h4 className="font-semibold text-black mb-3">使用技術・スキル</h4>
                 <div className="flex flex-wrap gap-2">
                   {product.technologies.map((tech) => (
                     <Badge key={tech} className="bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors">
@@ -356,8 +346,8 @@ export default function ProductDetailPage() {
             <Card className="bg-white border-gray-200 shadow-lg">
               <CardHeader>
                 <CardTitle className="text-xl text-black flex items-center">
-                  <Target className="w-6 h-6 mr-2 text-red-500" />
-                  課題・チャレンジ
+                  <AlertTriangle className="w-6 h-6 mr-2 text-red-500" />
+                  苦労したこと・課題
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -376,7 +366,7 @@ export default function ProductDetailPage() {
               <CardHeader>
                 <CardTitle className="text-xl text-black flex items-center">
                   <Lightbulb className="w-6 h-6 mr-2 text-yellow-500" />
-                  解決策・アプローチ
+                  工夫したこと・解決策
                 </CardTitle>
               </CardHeader>
               <CardContent>

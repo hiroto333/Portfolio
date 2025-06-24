@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, ArrowRight, Clock, AlertCircle } from "lucide-react"
+import { Github, ArrowRight, Clock, AlertCircle, Trophy, Users, Target } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -16,86 +16,84 @@ export default function ProductsPage() {
   const products = [
     {
       id: 1,
-      title: "E-commerce Platform",
-      description: "モダンなECサイトのフロントエンド開発",
+      title: "PUMP",
+      description: "検索リンクメモ管理システム",
       longDescription:
-        "Next.js、TypeScript、Stripe APIを使用して構築したレスポンシブなEコマースプラットフォーム。ユーザーフレンドリーなインターフェースと高速なパフォーマンスを実現。",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
+        "検索リンクごとにメモを記録し、リンクにカーソルを合わせるだけで内容をポップアップ表示。メモは「必要／不必要」で分類でき、必要なリンクには緑色、不必要なリンクには赤色の下線が表示され、視覚的に情報を整理できます。",
+      technologies: ["JavaScript", "HTML/CSS", "Chrome Extension", "DOM操作"],
+      image: "/placeholder.svg?height=200&width=300",
+      demoUrl: "#",
+      githubUrl: "#",
+      developmentTime: "ハッカソン期間中",
+      status: "完成",
+      award: "技育CAMP Vol.23 最優秀賞",
+      role: "ポップアップメモ表示機能、下線追加機能の実装",
+      teamSize: "チーム開発",
+    },
+    {
+      id: 2,
+      title: "Trive",
+      description: "AI搭載旅行プラン作成アプリ",
+      longDescription:
+        "ユーザーが行きたい市区町村を選択すると地図上に観光スポットがピンで表示され、訪れたい場所を保存できます。各スポットに滞在時間を入力すると、効率的なルートと所要時間が自動で表示され、旅行のしおりの基礎となるプランを作成できます。",
+      technologies: ["React", "Node.js", "Google Maps API", "MongoDB"],
       image: "/placeholder.svg?height=200&width=300",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "3ヶ月",
       status: "完成",
-    },
-    {
-      id: 2,
-      title: "Task Management App",
-      description: "チーム向けタスク管理アプリケーション",
-      longDescription:
-        "React、Node.js、MongoDBを使用したリアルタイムコラボレーション機能付きタスク管理ツール。直感的なドラッグ&ドロップインターフェースを実装。",
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      image: "/placeholder.svg?height=200&width=300",
-      demoUrl: "#",
-      githubUrl: "#",
-      developmentTime: "2ヶ月",
-      status: "完成",
+      role: "リーダー（PM）、バックエンド開発",
+      teamSize: "チーム開発",
     },
     {
       id: 3,
-      title: "Portfolio Website",
-      description: "デザイナー向けポートフォリオサイト",
+      title: "Gravity Four",
+      description: "重力付き四目並べゲーム",
       longDescription:
-        "Gatsby、GraphQL、Contentfulを使用した高速でSEOに最適化されたポートフォリオサイト。アニメーションとインタラクションを重視したデザイン。",
-      technologies: ["Gatsby", "GraphQL", "Contentful", "Framer Motion"],
+        "コマが下から積み上がる重力のルールを再現し、縦・横・斜めのいずれかに4つ揃えたプレイヤーが勝利となる対戦型の重力付き四目並べゲームを開発しました。初めての個人開発プロジェクトとして、ゲームロジックから勝敗判定まで全て実装。",
+      technologies: ["JavaScript", "HTML5 Canvas", "CSS", "ゲームロジック"],
       image: "/placeholder.svg?height=200&width=300",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "1ヶ月",
       status: "完成",
+      role: "個人開発（全機能実装）",
+      teamSize: "個人開発",
     },
     {
       id: 4,
-      title: "Mobile App UI",
-      description: "フィットネスアプリのUI/UXデザイン",
+      title: "子どもの「やってみたい」アプリ",
+      description: "子ども向け体験マッチングプラットフォーム",
       longDescription:
-        "React Native、Expo、Figmaを使用したユーザーフレンドリーなモバイルアプリのデザインと開発。健康管理とワークアウト追跡機能を実装。",
-      technologies: ["React Native", "Expo", "Figma", "Redux"],
+        "子どもがショート動画で体験内容を見て「いいね」すると、親に通知が届き、関連する体験イベントが提示されます。気になった体験は保存でき、サブスクリプションに加入すると割引価格で参加可能です。体験提供企業からの広告費を割引原資とするビジネスモデル。",
+      technologies: ["ビジネスモデル設計", "UI/UX設計", "収益計画", "プレゼンテーション"],
       image: "/placeholder.svg?height=200&width=300",
       demoUrl: "#",
       githubUrl: "#",
-      developmentTime: "4ヶ月",
-      status: "開発中",
+      developmentTime: "2ヶ月",
+      status: "企画完成",
+      award: "和歌山大学学生挑戦コンテスト2024 企業賞",
+      role: "発表資料作成、収益計画立案",
+      teamSize: "チーム開発",
     },
     {
       id: 5,
-      title: "Dashboard Analytics",
-      description: "データ可視化ダッシュボード",
+      title: "非常持ち出し袋支援システム",
+      description: "災害対策支援研究プロジェクト",
       longDescription:
-        "D3.js、Chart.js、Reactを使用したインタラクティブなデータ可視化ダッシュボード。リアルタイムデータ更新とカスタマイズ可能なウィジェット。",
-      technologies: ["React", "D3.js", "Chart.js", "WebSocket"],
+        "ユーザーが作成した非常持ち出し袋では対応できない状況をシステムが提示することで、未考慮の状況に気づきを与える支援システムを提案しました。限られた重量内で個人に合った適切な物を選ぶ支援を行います。",
+      technologies: ["研究手法", "システム設計", "ユーザビリティ", "論文執筆"],
       image: "/placeholder.svg?height=200&width=300",
       demoUrl: "#",
       githubUrl: "#",
-      developmentTime: "2.5ヶ月",
-      status: "完成",
-    },
-    {
-      id: 6,
-      title: "AI Chat Interface",
-      description: "AI搭載チャットインターフェース",
-      longDescription:
-        "OpenAI API、Next.js、TypeScriptを使用したAI搭載チャットアプリケーション。自然言語処理とリアルタイム会話機能を実装。",
-      technologies: ["Next.js", "OpenAI API", "TypeScript", "Prisma"],
-      image: "/placeholder.svg?height=200&width=300",
-      demoUrl: "#",
-      githubUrl: "#",
-      developmentTime: "3.5ヶ月",
-      status: "完成",
+      developmentTime: "6ヶ月",
+      status: "研究完了",
+      role: "研究全般（企画・設計・実装・論文執筆）",
+      teamSize: "個人研究",
     },
   ]
 
   useEffect(() => {
-    // ページロード時のシミュレーション
     const timer = setTimeout(() => {
       setIsPageLoading(false)
     }, 1000)
@@ -107,11 +105,7 @@ export default function ProductsPage() {
     try {
       setIsLoading(id)
       setError(null)
-
-      // 実際のアプリケーションでは、ここでAPIコールなどを行う
       await new Promise((resolve) => setTimeout(resolve, 600))
-
-      // ナビゲーションは自動的に行われる（Linkコンポーネントによる）
     } catch (err) {
       setError("詳細ページの読み込みに失敗しました。もう一度お試しください。")
     } finally {
@@ -142,8 +136,8 @@ export default function ProductsPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            これまでに手がけたプロジェクトの一部をご紹介します。
-            それぞれに異なる技術とアプローチで課題解決に取り組みました。
+            これまでに手がけたプロジェクトをご紹介します。
+            ハッカソンでの受賞作品から研究プロジェクトまで、様々な技術とアプローチで課題解決に取り組みました。
           </p>
         </div>
 
@@ -180,11 +174,21 @@ export default function ProductsPage() {
                 {/* Status Badge */}
                 <Badge
                   className={`absolute top-4 right-4 ${
-                    product.status === "完成" ? "bg-green-500 text-white" : "bg-yellow-500 text-black"
+                    product.status === "完成" || product.status === "研究完了" || product.status === "企画完成"
+                      ? "bg-green-500 text-white"
+                      : "bg-yellow-500 text-black"
                   }`}
                 >
                   {product.status}
                 </Badge>
+
+                {/* Award Badge */}
+                {product.award && (
+                  <Badge className="absolute top-4 left-4 bg-yellow-600 text-white flex items-center">
+                    <Trophy className="w-3 h-3 mr-1" />
+                    受賞
+                  </Badge>
+                )}
               </div>
 
               <CardHeader>
@@ -195,14 +199,27 @@ export default function ProductsPage() {
                   {product.title}
                 </CardTitle>
                 <CardDescription className="text-gray-600">{product.description}</CardDescription>
+                {product.award && <p className="text-sm text-yellow-600 font-medium mt-1">{product.award}</p>}
               </CardHeader>
 
               <CardContent>
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">{product.longDescription}</p>
 
-                <div className="flex items-center text-gray-500 text-sm mb-4">
-                  <Clock className="w-4 h-4 mr-1" aria-hidden="true" />
-                  <span>開発期間: {product.developmentTime}</span>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-gray-500 text-sm">
+                    <Clock className="w-4 h-4 mr-1" aria-hidden="true" />
+                    <span>開発期間: {product.developmentTime}</span>
+                  </div>
+
+                  <div className="flex items-center text-gray-500 text-sm">
+                    <Users className="w-4 h-4 mr-1" aria-hidden="true" />
+                    <span>{product.teamSize}</span>
+                  </div>
+
+                  <div className="flex items-start text-gray-500 text-sm">
+                    <Target className="w-4 h-4 mr-1 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <span className="leading-relaxed">{product.role}</span>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -210,7 +227,7 @@ export default function ProductsPage() {
                     <Badge
                       key={tech}
                       variant="secondary"
-                      className="bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors"
+                      className="bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors text-xs"
                     >
                       {tech}
                     </Badge>

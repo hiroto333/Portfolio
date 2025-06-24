@@ -55,10 +55,10 @@ export default function TopPage() {
   }
 
   const catchphrases = [
-    "コードで未来を創る",
-    "技術と情熱で課題解決",
-    "ユーザーファーストな開発者",
-    "学び続ける成長マインド",
+    "技術で社会に価値を届ける",
+    "ユーザー視点で課題解決",
+    "チームで成果を生み出す力",
+    "技術とビジネスの架け橋",
   ]
 
   const [currentPhrase, setCurrentPhrase] = useState(0)
@@ -102,7 +102,7 @@ export default function TopPage() {
               <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full animate-pulse" />
               <img
                 src="/placeholder.svg?height=128&width=128"
-                alt="田中太郎のプロフィール写真"
+                alt="石田大翔のプロフィール写真"
                 className="relative w-full h-full rounded-full object-cover border-4 border-white shadow-2xl hover:scale-110 transition-transform duration-500 will-change-transform"
                 loading="eager"
               />
@@ -125,12 +125,12 @@ export default function TopPage() {
               </p>
             </div>
 
-            <p className="text-xl text-gray-600 mb-4">Frontend Developer & CS Student</p>
+            <p className="text-xl text-gray-600 mb-4">Graduate Student & Aspiring Engineer</p>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-              情報系大学3年生。React/Next.jsを中心としたモダンなWeb開発に情熱を注いでいます。
+              和歌山大学大学院システム工学研究科修士1年。防災システムの研究とハッカソン・ビジネスコンテストでの受賞経験を通じて、
               <br />
-              <span className="font-medium text-gray-600">「技術で人々の生活をより豊かに」</span>
-              することを目指しています。
+              <span className="font-medium text-gray-600">「技術を軸に、人や社会に価値を届けられるエンジニア」</span>
+              を目指しています。
             </p>
           </div>
 

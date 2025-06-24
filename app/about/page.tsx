@@ -11,6 +11,10 @@ import {
   Lightbulb,
   Award,
   ChevronDown,
+  Trophy,
+  Car,
+  Globe,
+  Code,
 } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -33,7 +37,7 @@ export default function AboutPage() {
     { name: "HTML/CSS", level: 5, category: "Frontend" },
     { name: "Tailwind CSS", level: 4, category: "Frontend" },
     { name: "Node.js", level: 3, category: "Backend" },
-    { name: "Python", level: 3, category: "Language" },
+    { name: "Python", level: 4, category: "Language" },
     { name: "Git", level: 4, category: "Tools" },
     { name: "Figma", level: 3, category: "Design" },
     { name: "Docker", level: 2, category: "Tools" },
@@ -59,49 +63,87 @@ export default function AboutPage() {
   const jobHuntingValues = [
     {
       icon: Target,
-      title: "ユーザーファースト",
-      description: "技術のための技術ではなく、ユーザーの課題解決を第一に考える開発を心がけています。",
-      details: "ユーザビリティテストやアクセシビリティを重視し、誰もが使いやすいプロダクトの開発を目指しています。",
+      title: "技術とビジネスの両面から価値創出",
+      description: "単なる技術者ではなく、ビジネス視点も持ちながら社会に価値を届けられる環境を求めています。",
+      details: "ユーザーの課題やニーズを深く理解し、技術を活用して解決策を提案できるエンジニアを目指しています。",
     },
     {
       icon: Lightbulb,
-      title: "継続的な学習",
-      description: "技術の進歩が早いIT業界で、常に新しい技術をキャッチアップし続ける姿勢を大切にしています。",
-      details: "月5冊の技術書読書、オンライン学習、技術コミュニティへの参加を通じて学習を継続しています。",
+      title: "自分の将来にワクワクできる環境",
+      description:
+        "やりがいのある仕事、尊敬できる同僚、共感できるミッション・ビジョン・バリューがある企業を重視しています。",
+      details: "自分の将来が想像でき、成長し続けられる環境で働きたいと考えています。",
     },
     {
       icon: Users,
-      title: "チームワーク",
-      description: "個人の技術力だけでなく、チーム全体のパフォーマンス向上に貢献できる開発者を目指しています。",
-      details: "コードレビュー、ペアプログラミング、知識共有を通じてチーム全体のスキル向上に貢献します。",
+      title: "若手でも裁量を持ち、挑戦できる環境",
+      description: "年次に関係なく、アイデアを形にし、責任を持って取り組める環境を求めています。",
+      details: "失敗を恐れずに挑戦でき、その経験から学び成長できる文化を大切にしています。",
+    },
+  ]
+
+  const qualifications = [
+    { date: "2021年10月", name: "普通自動車第一種免許", icon: Car },
+    { date: "2023年12月", name: "基本情報技術者試験", icon: Code },
+    { date: "2024年7月", name: "TOEIC® L&R Test 695点", icon: Globe },
+  ]
+
+  const education = [
+    {
+      period: "2021年4月 - 2025年3月",
+      institution: "和歌山大学システム工学部システム工学科",
+      status: "卒業",
+      description: "情報工学を専攻し、理論と実践の両面から技術を学習",
+    },
+    {
+      period: "2025年4月 - 2027年3月",
+      institution: "和歌山大学大学院システム工学研究科システム工学専攻修士課程",
+      status: "修了見込み",
+      description: "非常持ち出し袋作成支援システムの研究に従事",
     },
   ]
 
   const experiences = [
     {
-      period: "2024年4月 - 現在",
-      title: "フロントエンドエンジニア（インターン）",
-      company: "株式会社テックスタートアップ",
+      period: "2024年 - 現在",
+      title: "学生IT団体 副代表",
+      company: "研究室内IT団体",
       description:
-        "React/Next.jsを使用したWebアプリケーションの開発に従事。ユーザビリティの向上とパフォーマンス最適化を担当。",
-      achievements: ["ページ読み込み速度を40%改善", "新機能のUI/UX設計から実装まで担当"],
-      skills: ["React", "Next.js", "TypeScript", "Figma"],
+        "立ち上げメンバーとして副代表を務め、週1回のLT会の企画・運営を担当。メンバーが挑戦しやすい環境づくりに注力。",
+      achievements: ["週1回の勉強会を継続運営", "ハッカソン・ビジネスコンテストでの受賞をサポート"],
+      skills: ["リーダーシップ", "企画・運営", "チームビルディング"],
     },
     {
-      period: "2023年9月 - 2024年3月",
-      title: "Webサイト制作（フリーランス）",
-      company: "個人事業",
-      description: "地域の中小企業向けのWebサイト制作を3件担当。要件定義からデプロイまで一貫して対応。",
-      achievements: ["クライアント満足度100%", "SEO対策により検索順位を平均30位向上"],
-      skills: ["WordPress", "HTML/CSS", "JavaScript", "SEO"],
+      period: "2024年",
+      title: "ハッカソン・ビジネスコンテスト参加",
+      company: "複数のイベント",
+      description: "技育CAMP Vol.23で最優秀賞、和歌山大学学生挑戦コンテスト2024で企業賞を受賞。",
+      achievements: ["技育CAMP Vol.23 最優秀賞", "和歌山大学学生挑戦コンテスト2024 企業賞"],
+      skills: ["プレゼンテーション", "チーム開発", "ユーザー視点"],
     },
   ]
 
-  const hobbies = [
-    { name: "プログラミング", icon: "💻", description: "新しい技術の学習と個人プロジェクトの開発" },
-    { name: "読書", icon: "📚", description: "技術書からビジネス書まで月5冊ペース" },
-    { name: "カフェ巡り", icon: "☕", description: "作業環境を変えてクリエイティビティを刺激" },
-    { name: "写真撮影", icon: "📸", description: "UI/UXデザインの感性を磨くため" },
+  const strengths = [
+    {
+      title: "チームで協働しながら価値ある成果を生み出す力",
+      description: "相手が何を考え、何を求めているのかを常に意識し、全員が力を発揮できる雰囲気づくりを心がけています。",
+      examples: ["孤立しがちなメンバーへの自然な声かけ", "メンバー間の調整役", "ハッカソンでの最優秀賞受賞"],
+    },
+    {
+      title: "社会課題を発見し、技術で解決策を提案する力",
+      description: "研究では「社会課題を自ら発見し、情報技術で解決策を提案する」スタイルで取り組んでいます。",
+      examples: ["非常持ち出し袋作成支援システムの提案", "ユーザー視点を重視した開発", "価値創出への意識"],
+    },
+  ]
+
+  const weaknesses = [
+    {
+      title: "利他的になりすぎて自分の意見を後回しにしてしまう",
+      description:
+        "チームの調和を重視するあまり、自分の意見や希望を伝えるのが遅れ、意思決定を遅らせてしまうことがありました。",
+      improvement:
+        "「意見を伝えることもチームへの貢献」と捉え、自分の考えを整理して適切なタイミングで伝えるよう意識しています。",
+    },
   ]
 
   const toggleSection = (section: string) => {
@@ -122,7 +164,7 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            技術への情熱と人への思いやりを持って、より良い未来を創造したいと考えています。
+            技術を軸に、人や社会に価値を届けられるエンジニアを目指しています。
           </p>
         </div>
 
@@ -140,18 +182,17 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-600 leading-relaxed">
-                  情報系大学3年生の田中太郎です。高校時代にプログラミングに出会い、
-                  「コードで人々の生活をより豊かにしたい」という想いから本格的に学習を開始しました。
+                  和歌山大学大学院システム工学研究科の石田大翔です。高校生の時に「社会に大きなインパクトを与えたい」と考え、
+                  ITを活用すれば小さなコストで大きな価値を創出できると気づき、理系が苦手でしたが情報学の道を選びました。
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  大学では情報工学を専攻し、理論と実践の両面から技術を学んでいます。
-                  特にフロントエンド開発に興味を持ち、React/Next.jsを中心とした
-                  モダンなWeb技術の習得に力を入れています。
+                  大学院では非常持ち出し袋の作成支援システムの研究に取り組み、社会課題を技術で解決することの意義を学んでいます。
+                  また、研究室内の学生IT団体の副代表として、週1回のLT会を企画・運営し、仲間が挑戦しやすい環境づくりに注力しています。
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  現在はスタートアップ企業でインターンとして実務経験を積みながら、
-                  個人プロジェクトにも積極的に取り組んでいます。
-                  技術力の向上だけでなく、ビジネス視点も身につけることを意識しています。
+                  ハッカソンやビジネスコンテストにも積極的に参加し、技育CAMP Vol.23で最優秀賞、
+                  和歌山大学学生挑戦コンテスト2024で企業賞を受賞しました。
+                  これらの経験を通じて、「誰かの困りごとを技術で解決すること」にやりがいを感じています。
                 </p>
               </CardContent>
             </Card>
@@ -165,15 +206,15 @@ export default function AboutPage() {
               <CardContent className="space-y-3">
                 <div className="flex items-center text-gray-600">
                   <MapPin className="w-4 h-4 mr-2" aria-hidden="true" />
-                  東京都在住
+                  和歌山県在住
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Calendar className="w-4 h-4 mr-2" aria-hidden="true" />
-                  2002年生まれ（22歳）
+                  2003年生まれ（21歳）
                 </div>
                 <div className="flex items-center text-gray-600">
                   <GraduationCap className="w-4 h-4 mr-2" aria-hidden="true" />
-                  ○○大学 情報工学科 3年
+                  和歌山大学大学院 修士1年
                 </div>
               </CardContent>
             </Card>
@@ -184,7 +225,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">2025年卒</div>
+                  <div className="text-2xl font-bold text-blue-600 mb-2">2027年卒</div>
                   <Badge className="bg-green-500 text-white">積極的に活動中</Badge>
                 </div>
               </CardContent>
@@ -192,9 +233,60 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Job Hunting Values */}
+        {/* Qualifications */}
+        <div
+          className={`mb-16 transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
+          <h2 className="text-3xl font-bold text-black mb-8 text-center">資格・スコア</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {qualifications.map((qual, index) => (
+              <Card
+                key={index}
+                className="bg-white border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <CardContent className="p-6 text-center">
+                  <qual.icon className="w-12 h-12 mx-auto mb-4 text-blue-600" />
+                  <h3 className="font-semibold text-black mb-2">{qual.name}</h3>
+                  <p className="text-gray-600 text-sm">{qual.date}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Education */}
         <div
           className={`mb-16 transition-all duration-1000 delay-400 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
+          <h2 className="text-3xl font-bold text-black mb-8 text-center">学歴</h2>
+          <div className="space-y-6">
+            {education.map((edu, index) => (
+              <Card
+                key={index}
+                className="bg-white border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <CardHeader>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start">
+                    <div>
+                      <CardTitle className="text-lg text-black">{edu.institution}</CardTitle>
+                      <CardDescription className="text-blue-600 font-medium">{edu.description}</CardDescription>
+                    </div>
+                    <div className="flex flex-col items-end mt-2 md:mt-0">
+                      <Badge variant="outline" className="mb-1">
+                        {edu.period}
+                      </Badge>
+                      <Badge className="bg-green-500 text-white">{edu.status}</Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Job Hunting Values */}
+        <div
+          className={`mb-16 transition-all duration-1000 delay-500 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <h2 className="text-3xl font-bold text-black mb-8 text-center">就活の軸</h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -276,9 +368,9 @@ export default function AboutPage() {
 
         {/* Experience */}
         <div
-          className={`mb-16 transition-all duration-1000 delay-800 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`mb-16 transition-all duration-1000 delay-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <h2 className="text-3xl font-bold text-black mb-8 text-center">経験・実績</h2>
+          <h2 className="text-3xl font-bold text-black mb-8 text-center">活動・実績</h2>
           <div className="space-y-6">
             {experiences.map((exp, index) => (
               <Card
@@ -288,7 +380,12 @@ export default function AboutPage() {
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start">
                     <div>
-                      <CardTitle className="text-xl text-black">{exp.title}</CardTitle>
+                      <CardTitle className="text-xl text-black flex items-center">
+                        {exp.title}
+                        {exp.achievements.some((achievement) => achievement.includes("賞")) && (
+                          <Trophy className="w-5 h-5 ml-2 text-yellow-500" />
+                        )}
+                      </CardTitle>
                       <CardDescription className="text-blue-600 font-medium">{exp.company}</CardDescription>
                     </div>
                     <Badge variant="outline" className="mt-2 md:mt-0">
@@ -307,13 +404,15 @@ export default function AboutPage() {
                       </h4>
                       <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
                         {exp.achievements.map((achievement, i) => (
-                          <li key={i}>{achievement}</li>
+                          <li key={i} className={achievement.includes("賞") ? "font-medium text-yellow-700" : ""}>
+                            {achievement}
+                          </li>
                         ))}
                       </ul>
                     </div>
 
                     <div>
-                      <h4 className="font-medium text-black mb-2">使用技術</h4>
+                      <h4 className="font-medium text-black mb-2">身につけたスキル</h4>
                       <div className="flex flex-wrap gap-1">
                         {exp.skills.map((skill) => (
                           <Badge key={skill} variant="secondary" className="text-xs">
@@ -329,43 +428,80 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Hobbies */}
+        {/* Strengths & Weaknesses */}
         <div
-          className={`mb-16 transition-all duration-1000 delay-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`mb-16 transition-all duration-1000 delay-800 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <h2 className="text-3xl font-bold text-black mb-8 text-center">趣味・興味</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {hobbies.map((hobby, index) => (
-              <Card
-                key={index}
-                className="bg-white border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer focus-within:ring-2 focus-within:ring-blue-500"
-                tabIndex={0}
-                role="button"
-                aria-label={`趣味: ${hobby.name} - ${hobby.description}`}
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-3" role="img" aria-label={hobby.name}>
-                    {hobby.icon}
-                  </div>
-                  <h3 className="font-semibold text-black mb-2">{hobby.name}</h3>
-                  <p className="text-gray-600 text-sm">{hobby.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Strengths */}
+            <div>
+              <h2 className="text-3xl font-bold text-black mb-8 text-center">強み</h2>
+              <div className="space-y-6">
+                {strengths.map((strength, index) => (
+                  <Card
+                    key={index}
+                    className="bg-green-50 border-green-200 shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <CardHeader>
+                      <CardTitle className="text-lg text-black">{strength.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 mb-4">{strength.description}</p>
+                      <div>
+                        <h4 className="font-medium text-black mb-2">具体例</h4>
+                        <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
+                          {strength.examples.map((example, i) => (
+                            <li key={i}>{example}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Weaknesses */}
+            <div>
+              <h2 className="text-3xl font-bold text-black mb-8 text-center">弱み・改善点</h2>
+              <div className="space-y-6">
+                {weaknesses.map((weakness, index) => (
+                  <Card
+                    key={index}
+                    className="bg-orange-50 border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <CardHeader>
+                      <CardTitle className="text-lg text-black">{weakness.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 mb-4">{weakness.description}</p>
+                      <div className="border-t pt-4">
+                        <h4 className="font-medium text-black mb-2">改善への取り組み</h4>
+                        <p className="text-gray-600 text-sm">{weakness.improvement}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Personal Statement */}
+        {/* Future Vision */}
         <Card
-          className={`bg-gradient-to-r from-gray-900 to-black text-white shadow-2xl transition-all duration-1000 delay-1200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`bg-gradient-to-r from-gray-900 to-black text-white shadow-2xl transition-all duration-1000 delay-900 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <CardContent className="p-8 text-center">
             <Heart className="w-12 h-12 mx-auto mb-4 text-red-400" aria-hidden="true" />
-            <h2 className="text-2xl font-bold mb-4">私の想い</h2>
-            <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-              技術は手段であり、目的ではありません。私は技術を通じて、
-              人々の生活をより豊かで便利にし、社会の課題解決に貢献したいと考えています。
-              そのために、常に学び続け、チームと協力し、ユーザーの声に耳を傾ける開発者でありたいと思います。
+            <h2 className="text-2xl font-bold mb-4">目指すエンジニア像</h2>
+            <p className="text-lg leading-relaxed max-w-4xl mx-auto mb-6">
+              私が目指すのは、「技術を軸に、人や社会に価値を届けられるエンジニア」です。
+              単にプログラムを書くことにとどまらず、ユーザーの課題やニーズを深く理解し、
+              それに応える形で技術を活用できるエンジニアを理想としています。
+            </p>
+            <p className="text-base leading-relaxed max-w-4xl mx-auto text-gray-300">
+              5年後にはサービス全体を俯瞰できる立場で、10年後には新規事業の立ち上げやマネジメントにも挑戦したいと考えています。
+              「ユーザーにとって価値のあるサービスとは何か」を常に問い続け、その実現に責任を持てるエンジニアを目指します。
             </p>
           </CardContent>
         </Card>

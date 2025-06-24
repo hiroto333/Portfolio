@@ -68,7 +68,7 @@ export function Header() {
                 />
               </div>
               <span className="text-xl font-bold text-black group-hover:text-gray-600 transition-colors duration-300">
-                Tanaka Taro
+                Ishida Hiroto
               </span>
             </Link>
 

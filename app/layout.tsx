@@ -10,11 +10,11 @@ import { ErrorBoundary } from "@/components/error-boundary"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "田中太郎 | Modern Portfolio",
+  title: "石田大翔 | Portfolio",
   description:
-    "フロントエンド開発者 田中太郎のポートフォリオサイト。React/Next.jsを中心としたモダンなWeb開発の作品をご紹介します。",
+    "石田大翔のポートフォリオサイト。React/Next.jsを中心としたモダンなWeb開発の作品をご紹介します。",
   keywords: ["フロントエンド", "React", "Next.js", "TypeScript", "ポートフォリオ"],
-  authors: [{ name: "田中太郎" }],
+  authors: [{ name: "石田大翔" }],
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
     generator: 'v0.dev'
@@ -33,7 +33,7 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <footer className="border-t border-gray-200 py-8 px-6 bg-gray-50">
             <div className="max-w-6xl mx-auto text-center">
-              <p className="text-gray-500">© 2024 田中太郎. All rights reserved.</p>
+              <p className="text-gray-500">© 2025 石田大翔. All rights reserved.</p>
             </div>
           </footer>
           <GlobalClickEffects />
