@@ -129,12 +129,7 @@ export default function ProductsPage() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-black mb-6">
-            Products
-            <span className="text-4xl ml-2" role="img" aria-label="ロケット">
-              🚀
-            </span>
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-black mb-6">Products</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             これまでに手がけたプロジェクトをご紹介します。
             ハッカソンでの受賞作品から研究プロジェクトまで、様々な技術とアプローチで課題解決に取り組みました。
@@ -269,7 +264,7 @@ export default function ProductsPage() {
             asChild
           >
             <a
-              href="https://github.com"
+              href="https://github.com/hiroto333"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHubでより多くのプロジェクトを見る（新しいタブで開く）"

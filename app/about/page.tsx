@@ -158,10 +158,7 @@ export default function AboutPage() {
           className={`text-center mb-16 transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <h1 className="text-5xl md:text-6xl font-bold text-black mb-6">
-            About Me
-            <span className="text-4xl ml-2" role="img" aria-label="ロケット">
-              🚀
-            </span>
+            About
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             技術を軸に、人や社会に価値を届けられるエンジニアを目指しています。
@@ -183,7 +180,7 @@ export default function AboutPage() {
               <CardContent className="space-y-4">
                 <p className="text-gray-600 leading-relaxed">
                   和歌山大学大学院システム工学研究科の石田大翔です。高校生の時に「社会に大きなインパクトを与えたい」と考え、
-                  ITを活用すれば小さなコストで大きな価値を創出できると気づき、理系が苦手でしたが情報学の道を選びました。
+                  ITを活用すれば小さなコストで大きな価値を創出できると気づき、情報学の道を選びました。
                 </p>
                 <p className="text-gray-600 leading-relaxed">
                   大学院では非常持ち出し袋の作成支援システムの研究に取り組み、社会課題を技術で解決することの意義を学んでいます。
@@ -210,7 +207,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Calendar className="w-4 h-4 mr-2" aria-hidden="true" />
-                  2003年生まれ（21歳）
+                  2003年生まれ（22歳）
                 </div>
                 <div className="flex items-center text-gray-600">
                   <GraduationCap className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -463,7 +460,7 @@ export default function AboutPage() {
 
             {/* Weaknesses */}
             <div>
-              <h2 className="text-3xl font-bold text-black mb-8 text-center">弱み・改善点</h2>
+              <h2 className="text-3xl font-bold text-black mb-8 text-center">弱み</h2>
               <div className="space-y-6">
                 {weaknesses.map((weakness, index) => (
                   <Card

@@ -115,19 +115,32 @@ export default function TopPage() {
           >
             <h1 className="text-6xl md:text-8xl font-bold text-black mb-6 relative">石田 大翔</h1>
 
-            <div className="h-16 mb-8 flex items-center justify-center">
-              <p
-                className="text-2xl md:text-3xl font-medium text-gray-700 transition-all duration-500"
-                aria-live="polite"
-                aria-atomic="true"
-              >
-                {catchphrases[currentPhrase]}
-              </p>
+            <div className="h-16 mb-8 flex items-center justify-center overflow-hidden">
+              <div className="relative w-full max-w-2xl">
+                {catchphrases.map((phrase, index) => (
+                  <p
+                    key={index}
+                    className={`absolute inset-0 text-2xl md:text-3xl font-medium text-gray-700 transition-all duration-700 ease-in-out ${
+                      index === currentPhrase
+                        ? "opacity-100 translate-x-0"
+                        : index < currentPhrase
+                          ? "opacity-0 -translate-x-full"
+                          : "opacity-0 translate-x-full"
+                    }`}
+                    aria-live={index === currentPhrase ? "polite" : "off"}
+                    aria-atomic="true"
+                  >
+                    {phrase}
+                  </p>
+                ))}
+              </div>
             </div>
 
-            <p className="text-xl text-gray-600 mb-4">Graduate Student & Aspiring Engineer</p>
+            <p className="text-xl text-gray-600 mb-4">Graduate Student</p>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-              和歌山大学大学院システム工学研究科修士1年。防災システムの研究とハッカソン・ビジネスコンテストでの受賞経験を通じて、
+              和歌山大学大学院システム工学研究科修士1年。
+              <br />
+              防災システムの研究とハッカソン・ビジネスコンテストでの受賞経験を通じて、
               <br />
               <span className="font-medium text-gray-600">「技術を軸に、人や社会に価値を届けられるエンジニア」</span>
               を目指しています。

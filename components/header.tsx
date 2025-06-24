@@ -1,19 +1,22 @@
 "use client"
 
+import type React from "react"
+
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import { Mail, Github, Check } from "lucide-react"
 
 export function Header() {
   const pathname = usePathname()
   const [clickedTab, setClickedTab] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [copiedEmail, setCopiedEmail] = useState(false)
 
   const navItems = [
     { href: "/about", label: "About" },
     { href: "/products", label: "Products" },
-    { href: "/articles", label: "Articles" },
     { href: "/contact", label: "Contact" },
   ]
 
@@ -25,6 +28,25 @@ export function Header() {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const handleCopyEmail = async (e: React.MouseEvent) => {
+    e.preventDefault()
+    try {
+      await navigator.clipboard.writeText("s266021@wakayama-u.ac.jp")
+      setCopiedEmail(true)
+      setTimeout(() => setCopiedEmail(false), 2000)
+    } catch (err) {
+      // フォールバック: テキスト選択
+      const textArea = document.createElement("textarea")
+      textArea.value = "s266021@wakayama-u.ac.jp"
+      document.body.appendChild(textArea)
+      textArea.select()
+      document.execCommand("copy")
+      document.body.removeChild(textArea)
+      setCopiedEmail(true)
+      setTimeout(() => setCopiedEmail(false), 2000)
+    }
   }
 
   useEffect(() => {
@@ -194,25 +216,24 @@ export function Header() {
             <div className="text-center">
               <p className="text-sm text-gray-500 mb-4">Let's connect!</p>
               <div className="flex justify-center space-x-4">
-                <a
-                  href="mailto:hello@example.com"
-                  className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 hover:scale-110"
+                <button
+                  onClick={handleCopyEmail}
+                  className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 hover:scale-110 relative"
+                  title={copiedEmail ? "コピーしました！" : "メールアドレスをコピー"}
                 >
-                  <span className="text-sm">✉️</span>
-                </a>
+                  {copiedEmail ? <Check className="w-4 h-4 text-green-500" /> : <Mail className="w-4 h-4" />}
+                </button>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/hiroto333"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 hover:scale-110"
+                  title="GitHub"
                 >
-                  <span className="text-sm">🐙</span>
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300 hover:scale-110"
-                >
-                  <span className="text-sm">💼</span>
+                  <Github className="w-4 h-4" />
                 </a>
               </div>
+              {copiedEmail && <p className="text-xs text-green-600 mt-2">メールアドレスをコピーしました！</p>}
             </div>
           </div>
         </div>

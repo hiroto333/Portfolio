@@ -24,7 +24,7 @@ export default function ProductDetailPage() {
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "ハッカソン期間中（48時間）",
-      teamSize: "チーム開発",
+      teamSize: "チーム開発（4人）",
       role: "ポップアップメモ表示機能、下線追加機能の実装、発表資料作成",
       award: "技育CAMP Vol.23 2024年度 最優秀賞",
       challenges: [
@@ -54,7 +54,7 @@ export default function ProductDetailPage() {
     },
     "2": {
       title: "Trive",
-      description: "AI搭載旅行プラン作成アプリ",
+      description: "旅行プラン作成アプリ",
       longDescription:
         "ユーザーが行きたい市区町村を選択すると地図上に観光スポットがピンで表示され、訪れたい場所を保存できます。各スポットに滞在時間を入力すると、効率的なルートと所要時間が自動で表示され、旅行のしおりの基礎となるプラン（訪問順、滞在時間、移動時間）を作成できるWebアプリケーションです。",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Google Maps API", "JavaScript"],
