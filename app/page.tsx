@@ -6,6 +6,7 @@ import { ArrowRight, Sparkles } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
+// import Image from "next/image"
 
 export default function TopPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -99,11 +100,12 @@ export default function TopPage() {
             className={`mb-8 transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             <div className="relative w-32 h-32 mx-auto mb-6">
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full animate-pulse" />
               <img
-                src="/placeholder.svg?height=128&width=128"
+                src="/syoumei.jpg"
                 alt="石田大翔のプロフィール写真"
-                className="relative w-full h-full rounded-full object-cover border-4 border-white shadow-2xl hover:scale-110 transition-transform duration-500 will-change-transform"
+                width={128}
+                height={128}
+                className="w-full h-full rounded-full object-cover border-4 border-white shadow-2xl hover:scale-110 transition-transform duration-500 will-change-transform"
                 loading="eager"
               />
             </div>

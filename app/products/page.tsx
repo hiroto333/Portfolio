@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import Link from "next/link"
+// import Image from "next/image"
 
 export default function ProductsPage() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
@@ -17,15 +18,15 @@ export default function ProductsPage() {
     {
       id: 1,
       title: "PUMP",
-      description: "検索リンクメモ管理システム",
+      description: "Chrome拡張機能　PUMP -PopUpMemoPad-",
       longDescription:
         "検索リンクごとにメモを記録し、リンクにカーソルを合わせるだけで内容をポップアップ表示。メモは「必要／不必要」で分類でき、必要なリンクには緑色、不必要なリンクには赤色の下線が表示され、視覚的に情報を整理できます。",
       technologies: ["JavaScript", "HTML/CSS", "Chrome Extension", "DOM操作"],
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/Pump.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "ハッカソン期間中",
-      status: "完成",
+      status: "開発中",
       award: "技育CAMP Vol.23 最優秀賞",
       role: "ポップアップメモ表示機能、下線追加機能の実装",
       teamSize: "チーム開発",
@@ -33,15 +34,15 @@ export default function ProductsPage() {
     {
       id: 2,
       title: "Trive",
-      description: "AI搭載旅行プラン作成アプリ",
+      description: "ドライブ旅行支援サイト　Trive -Trip&Drive-",
       longDescription:
         "ユーザーが行きたい市区町村を選択すると地図上に観光スポットがピンで表示され、訪れたい場所を保存できます。各スポットに滞在時間を入力すると、効率的なルートと所要時間が自動で表示され、旅行のしおりの基礎となるプランを作成できます。",
-      technologies: ["React", "Node.js", "Google Maps API", "MongoDB"],
-      image: "/placeholder.svg?height=200&width=300",
+      technologies: ["JavaScript", "HTML/CSS", "Google Maps API", "Firebase"],
+      image: "/Trive.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "3ヶ月",
-      status: "完成",
+      status: "開発中",
       role: "リーダー（PM）、バックエンド開発",
       teamSize: "チーム開発",
     },
@@ -51,8 +52,8 @@ export default function ProductsPage() {
       description: "重力付き四目並べゲーム",
       longDescription:
         "コマが下から積み上がる重力のルールを再現し、縦・横・斜めのいずれかに4つ揃えたプレイヤーが勝利となる対戦型の重力付き四目並べゲームを開発しました。初めての個人開発プロジェクトとして、ゲームロジックから勝敗判定まで全て実装。",
-      technologies: ["JavaScript", "HTML5 Canvas", "CSS", "ゲームロジック"],
-      image: "/placeholder.svg?height=200&width=300",
+      technologies: ["初開発", "Java", "ゲームロジック"],
+      image: "/GravityFour.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "1ヶ月",
@@ -62,12 +63,12 @@ export default function ProductsPage() {
     },
     {
       id: 4,
-      title: "子どもの「やってみたい」アプリ",
+      title: "子どもの「やってみたい」が溢れて，それを叶えられるアプリ",
       description: "子ども向け体験マッチングプラットフォーム",
       longDescription:
         "子どもがショート動画で体験内容を見て「いいね」すると、親に通知が届き、関連する体験イベントが提示されます。気になった体験は保存でき、サブスクリプションに加入すると割引価格で参加可能です。体験提供企業からの広告費を割引原資とするビジネスモデル。",
       technologies: ["ビジネスモデル設計", "UI/UX設計", "収益計画", "プレゼンテーション"],
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/child.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "2ヶ月",
@@ -79,11 +80,11 @@ export default function ProductsPage() {
     {
       id: 5,
       title: "非常持ち出し袋支援システム",
-      description: "災害対策支援研究プロジェクト",
+      description: "対応不可な状況の提示による非常持ち出し袋作成支援システムの開発",
       longDescription:
         "ユーザーが作成した非常持ち出し袋では対応できない状況をシステムが提示することで、未考慮の状況に気づきを与える支援システムを提案しました。限られた重量内で個人に合った適切な物を選ぶ支援を行います。",
-      technologies: ["研究手法", "システム設計", "ユーザビリティ", "論文執筆"],
-      image: "/placeholder.svg?height=200&width=300",
+      technologies: ["JavaScript", "HTML/CSS", "Firebase", "研究"],
+      image: "/kenkyu1.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "6ヶ月",
@@ -131,8 +132,9 @@ export default function ProductsPage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-black mb-6">Products</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            これまでに手がけたプロジェクトをご紹介します。
-            ハッカソンでの受賞作品から研究プロジェクトまで、様々な技術とアプローチで課題解決に取り組みました。
+            これまでに手がけたプロダクトをご紹介します。
+            <br />
+            様々な技術とアプローチで課題解決に取り組みました。
           </p>
         </div>
 
@@ -149,7 +151,7 @@ export default function ProductsPage() {
           {products.map((product) => (
             <Card
               key={product.id}
-              className={`bg-white border-gray-200 hover:shadow-2xl transition-all duration-500 cursor-pointer group overflow-hidden ${
+              className={`bg-white border-gray-200 hover:shadow-2xl transition-all duration-500 cursor-pointer group overflow-hidden flex flex-col h-full ${
                 hoveredCard === product.id ? "scale-105 shadow-2xl" : ""
               }`}
               onMouseEnter={() => setHoveredCard(product.id)}
@@ -161,8 +163,10 @@ export default function ProductsPage() {
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={`${product.title}のプロジェクト画像`}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-48 object-contain bg-gray-50 group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
+                  width={300}
+                  height={200}
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
 
@@ -186,7 +190,7 @@ export default function ProductsPage() {
                 )}
               </div>
 
-              <CardHeader>
+              <CardHeader className="flex-shrink-0">
                 <CardTitle
                   id={`product-title-${product.id}`}
                   className="text-black group-hover:text-gray-600 transition-colors"
@@ -197,7 +201,7 @@ export default function ProductsPage() {
                 {product.award && <p className="text-sm text-yellow-600 font-medium mt-1">{product.award}</p>}
               </CardHeader>
 
-              <CardContent>
+              <CardContent className="flex-1 flex flex-col">
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">{product.longDescription}</p>
 
                 <div className="space-y-3 mb-6">
@@ -229,26 +233,28 @@ export default function ProductsPage() {
                   ))}
                 </div>
 
-                <Link href={`/products/${product.id}`} className="block">
-                  <Button
-                    className="w-full bg-black text-white hover:bg-gray-800 hover:scale-105 transition-all duration-200 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-                    onClick={() => handleViewDetails(product.id)}
-                    disabled={isLoading === product.id}
-                    aria-label={`${product.title}の詳細を見る`}
-                  >
-                    {isLoading === product.id ? (
-                      <>
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
-                        読み込み中...
-                      </>
-                    ) : (
-                      <>
-                        詳細を見る
-                        <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
-                      </>
-                    )}
-                  </Button>
-                </Link>
+                <div className="mt-auto">
+                  <Link href={`/products/${product.id}`} className="block">
+                    <Button
+                      className="w-full bg-black text-white hover:bg-gray-800 hover:scale-105 transition-all duration-200 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                      onClick={() => handleViewDetails(product.id)}
+                      disabled={isLoading === product.id}
+                      aria-label={`${product.title}の詳細を見る`}
+                    >
+                      {isLoading === product.id ? (
+                        <>
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
+                          読み込み中...
+                        </>
+                      ) : (
+                        <>
+                          詳細を見る
+                          <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
+                        </>
+                      )}
+                    </Button>
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -256,11 +262,10 @@ export default function ProductsPage() {
 
         {/* GitHub Link */}
         <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6">もっと多くのプロジェクトをGitHubでご覧いただけます</p>
           <Button
             size="lg"
             variant="outline"
-            className="border-black text-black hover:bg-gray-50 hover:scale-105 transition-all duration-300 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            className="border-black text-black hover:bg-gray-50 hover:scale-105 transition-all duration-300 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 inline-flex items-center"
             asChild
           >
             <a
@@ -268,9 +273,10 @@ export default function ProductsPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHubでより多くのプロジェクトを見る（新しいタブで開く）"
+              className="inline-flex items-center"
             >
               <Github className="w-5 h-5 mr-2" aria-hidden="true" />
-              View All Projects
+              View All Products
             </a>
           </Button>
         </div>

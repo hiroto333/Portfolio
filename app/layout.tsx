@@ -12,8 +12,8 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "石田大翔 | Portfolio",
   description:
-    "石田大翔のポートフォリオサイト。React/Next.jsを中心としたモダンなWeb開発の作品をご紹介します。",
-  keywords: ["フロントエンド", "React", "Next.js", "TypeScript", "ポートフォリオ"],
+    "石田大翔のポートフォリオサイト。",
+  keywords: ["ポートフォリオ"],
   authors: [{ name: "石田大翔" }],
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",

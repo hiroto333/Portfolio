@@ -5,7 +5,6 @@ import type React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import { Mail, Github, Check } from "lucide-react"
 
 export function Header() {
@@ -79,16 +78,7 @@ export function Header() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
             {/* Logo - Always links to home */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-black transition-colors duration-300">
-                <Image
-                  src="/placeholder.svg?height=40&width=40"
-                  alt="Profile"
-                  width={40}
-                  height={40}
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+            <Link href="/" className="flex items-center group">
               <span className="text-xl font-bold text-black group-hover:text-gray-600 transition-colors duration-300">
                 Ishida Hiroto
               </span>
@@ -163,15 +153,6 @@ export function Header() {
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center space-x-3">
-              <div className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-gray-200">
-                <Image
-                  src="/placeholder.svg?height=32&width=32"
-                  alt="Profile"
-                  width={32}
-                  height={32}
-                  className="object-cover"
-                />
-              </div>
               <span className="text-lg font-bold text-black">Menu</span>
             </div>
             <button

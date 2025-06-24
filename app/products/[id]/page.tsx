@@ -20,7 +20,7 @@ export default function ProductDetailPage() {
       longDescription:
         "検索リンクごとにメモを記録し、リンクにカーソルを合わせるだけで内容をポップアップ表示。メモは「必要／不必要」で分類でき、必要なリンクには緑色、不必要なリンクには赤色の下線が表示され、視覚的に情報を整理できるChrome拡張機能です。サポーターズ主催のハッカソン（技育CAMP Vol.23 2024年度）で最優秀賞を受賞しました。",
       technologies: ["JavaScript", "HTML/CSS", "Chrome Extension API", "DOM操作", "Web Scraping"],
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/Pump.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "ハッカソン期間中（48時間）",
@@ -58,7 +58,7 @@ export default function ProductDetailPage() {
       longDescription:
         "ユーザーが行きたい市区町村を選択すると地図上に観光スポットがピンで表示され、訪れたい場所を保存できます。各スポットに滞在時間を入力すると、効率的なルートと所要時間が自動で表示され、旅行のしおりの基礎となるプラン（訪問順、滞在時間、移動時間）を作成できるWebアプリケーションです。",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Google Maps API", "JavaScript"],
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/Trive.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "3ヶ月",
@@ -95,7 +95,7 @@ export default function ProductDetailPage() {
       longDescription:
         "コマが下から積み上がる重力のルールを再現し、縦・横・斜めのいずれかに4つ揃えたプレイヤーが勝利となる対戦型の重力付き四目並べゲームです。初めての個人開発プロジェクトとして、ゲームロジックから勝敗判定、UI設計まで全て一人で実装しました。",
       technologies: ["JavaScript", "HTML5 Canvas", "CSS", "ゲームロジック", "アルゴリズム"],
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/GravityFour.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "1ヶ月",
@@ -132,7 +132,7 @@ export default function ProductDetailPage() {
       longDescription:
         "子どもがショート動画で体験内容を見て「いいね」すると、親に通知が届き、関連する体験イベントが提示されます。気になった体験は保存でき、サブスクリプションに加入すると割引価格で参加可能です。体験提供企業からの広告費を割引原資とし、運営はサブスク収益を得るビジネスモデルです。和歌山大学学生挑戦コンテスト2024 ビジネス部門で企業賞を受賞しました。",
       technologies: ["ビジネスモデル設計", "UI/UX設計", "収益計画", "プレゼンテーション", "市場分析"],
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/child.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "2ヶ月",
@@ -170,7 +170,7 @@ export default function ProductDetailPage() {
       longDescription:
         "ユーザーが作成した非常持ち出し袋では対応できない状況をシステムが提示することで、未考慮の状況に気づきを与える支援システムを提案しました。非常持ち出し袋の選定では、限られた重量内で個人に合った適切な物を選ぶ必要がありますが、物品の種類が膨大で本当に必要なものを判断するのは難しい現状があります。本研究では、この課題に対する新しいアプローチを提案しました。",
       technologies: ["研究手法", "システム設計", "ユーザビリティ評価", "論文執筆", "データ分析"],
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/kenkyu1.png",
       demoUrl: "#",
       githubUrl: "#",
       developmentTime: "6ヶ月",
@@ -256,7 +256,7 @@ export default function ProductDetailPage() {
             <img
               src={product.image || "/placeholder.svg"}
               alt={product.title}
-              className="w-full h-64 md:h-96 object-cover"
+              className="w-full h-64 md:h-96 object-contain bg-gray-50"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white">
@@ -332,7 +332,11 @@ export default function ProductDetailPage() {
                 <h4 className="font-semibold text-black mb-3">使用技術・スキル</h4>
                 <div className="flex flex-wrap gap-2">
                   {product.technologies.map((tech) => (
-                    <Badge key={tech} className="bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors">
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors text-xs"
+                    >
                       {tech}
                     </Badge>
                   ))}

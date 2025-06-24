@@ -30,18 +30,15 @@ export default function AboutPage() {
   }, [])
 
   const technicalSkills = [
-    { name: "React", level: 4, category: "Frontend" },
-    { name: "Next.js", level: 4, category: "Frontend" },
-    { name: "TypeScript", level: 3, category: "Language" },
+    { name: "Next.js", level: 2, category: "Frontend" },
+    { name: "TypeScript", level: 2, category: "Language" },
     { name: "JavaScript", level: 4, category: "Language" },
+    { name: "Java", level: 4, category: "Language" },
     { name: "HTML/CSS", level: 5, category: "Frontend" },
-    { name: "Tailwind CSS", level: 4, category: "Frontend" },
-    { name: "Node.js", level: 3, category: "Backend" },
-    { name: "Python", level: 4, category: "Language" },
+    { name: "Tailwind CSS", level: 3, category: "Frontend" },
+    { name: "Node.js", level: 1, category: "Backend" },
+    { name: "Python", level: 1, category: "Language" },
     { name: "Git", level: 4, category: "Tools" },
-    { name: "Figma", level: 3, category: "Design" },
-    { name: "Docker", level: 2, category: "Tools" },
-    { name: "AWS", level: 2, category: "Cloud" },
   ]
 
   const renderStars = (level: number, skillName: string) => {
@@ -103,16 +100,37 @@ export default function AboutPage() {
     },
   ]
 
-  const experiences = [
+  const activities = [
     {
       period: "2024年 - 現在",
       title: "学生IT団体 副代表",
       company: "研究室内IT団体",
       description:
-        "立ち上げメンバーとして副代表を務め、週1回のLT会の企画・運営を担当。メンバーが挑戦しやすい環境づくりに注力。",
-      achievements: ["週1回の勉強会を継続運営", "ハッカソン・ビジネスコンテストでの受賞をサポート"],
+        "立ち上げメンバーとして副代表を務め、メンバーが挑戦しやすい環境づくりに注力。",
+      achievements: ["主体性を持たせるための企画運営", "ハッカソン・ビジネスコンテストでの受賞"],
       skills: ["リーダーシップ", "企画・運営", "チームビルディング"],
     },
+    {
+      period: "2023年 - 現在",
+      title: "時間帯責任者",
+      company: "テイクアウトからあげ専門店",
+      description:
+        "2年間のアルバイト経験を経て時間帯責任者に昇格。新人の教育係として、分かりやすい指導と褒めて伸ばすアプローチを実践。",
+      achievements: ["効果的な新人教育", "顧客満足度の向上"],
+      skills: ["指導力", "コミュニケーション能力", "接客力"],
+    },
+    {
+      period: "2021年 - 2022年",
+      title: "装飾局 幹部",
+      company: "大学祭実行委員会",
+      description:
+        "40名規模の装飾局で幹部として、看板や大階段装飾など大学祭を華やかにする企画の統括を補助。出店での商品販売も担当。",
+      achievements: ["カチューシャ販売での価格設定・仕入れ", "40名のチームマネジメント"],
+      skills: ["企画力", "チームマネジメント", "商品企画"],
+    },
+  ]
+
+  const achievements = [
     {
       period: "2024年",
       title: "ハッカソン・ビジネスコンテスト参加",
@@ -157,9 +175,7 @@ export default function AboutPage() {
         <div
           className={`text-center mb-16 transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-black mb-6">
-            About
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-black mb-6">About</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             技術を軸に、人や社会に価値を届けられるエンジニアを目指しています。
           </p>
@@ -184,10 +200,10 @@ export default function AboutPage() {
                 </p>
                 <p className="text-gray-600 leading-relaxed">
                   大学院では非常持ち出し袋の作成支援システムの研究に取り組み、社会課題を技術で解決することの意義を学んでいます。
-                  また、研究室内の学生IT団体の副代表として、週1回のLT会を企画・運営し、仲間が挑戦しやすい環境づくりに注力しています。
+                  また、研究室内の学生IT団体の副代表として、仲間が挑戦しやすい環境づくりに注力しています。
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  ハッカソンやビジネスコンテストにも積極的に参加し、技育CAMP Vol.23で最優秀賞、
+                  ハッカソンやビジネスコンテストにも積極的に参加し、サポーターズ主催の技育CAMP Vol.23で最優秀賞、
                   和歌山大学学生挑戦コンテスト2024で企業賞を受賞しました。
                   これらの経験を通じて、「誰かの困りごとを技術で解決すること」にやりがいを感じています。
                 </p>
@@ -363,13 +379,13 @@ export default function AboutPage() {
           </Card>
         </div>
 
-        {/* Experience */}
+        {/* Activities */}
         <div
           className={`mb-16 transition-all duration-1000 delay-700 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <h2 className="text-3xl font-bold text-black mb-8 text-center">活動・実績</h2>
+          <h2 className="text-3xl font-bold text-black mb-8 text-center">活動</h2>
           <div className="space-y-6">
-            {experiences.map((exp, index) => (
+            {activities.map((activity, index) => (
               <Card
                 key={index}
                 className="bg-white border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300"
@@ -377,21 +393,16 @@ export default function AboutPage() {
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start">
                     <div>
-                      <CardTitle className="text-xl text-black flex items-center">
-                        {exp.title}
-                        {exp.achievements.some((achievement) => achievement.includes("賞")) && (
-                          <Trophy className="w-5 h-5 ml-2 text-yellow-500" />
-                        )}
-                      </CardTitle>
-                      <CardDescription className="text-blue-600 font-medium">{exp.company}</CardDescription>
+                      <CardTitle className="text-xl text-black">{activity.title}</CardTitle>
+                      <CardDescription className="text-blue-600 font-medium">{activity.company}</CardDescription>
                     </div>
                     <Badge variant="outline" className="mt-2 md:mt-0">
-                      {exp.period}
+                      {activity.period}
                     </Badge>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">{exp.description}</p>
+                  <p className="text-gray-600 mb-4">{activity.description}</p>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -400,9 +411,67 @@ export default function AboutPage() {
                         主な成果
                       </h4>
                       <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
-                        {exp.achievements.map((achievement, i) => (
-                          <li key={i} className={achievement.includes("賞") ? "font-medium text-yellow-700" : ""}>
-                            {achievement}
+                        {activity.achievements.map((achievement, i) => (
+                          <li key={i}>{achievement}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-medium text-black mb-2">身につけたスキル</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {activity.skills.map((skill) => (
+                          <Badge key={skill} variant="secondary" className="text-xs">
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Achievements */}
+        <div
+          className={`mb-16 transition-all duration-1000 delay-800 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
+          <h2 className="text-3xl font-bold text-black mb-8 text-center">実績</h2>
+          <div className="space-y-6">
+            {achievements.map((achievement, index) => (
+              <Card
+                key={index}
+                className="bg-gradient-to-r from-yellow-50 to-orange-50 border-yellow-200 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <CardHeader>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start">
+                    <div>
+                      <CardTitle className="text-xl text-black flex items-center">
+                        {achievement.title}
+                        <Trophy className="w-5 h-5 ml-2 text-yellow-500" />
+                      </CardTitle>
+                      <CardDescription className="text-orange-600 font-medium">{achievement.company}</CardDescription>
+                    </div>
+                    <Badge variant="outline" className="mt-2 md:mt-0 border-yellow-400">
+                      {achievement.period}
+                    </Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">{achievement.description}</p>
+
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="font-medium text-black flex items-center mb-2">
+                        <Award className="w-4 h-4 mr-2 text-yellow-600" aria-hidden="true" />
+                        受賞歴
+                      </h4>
+                      <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
+                        {achievement.achievements.map((item, i) => (
+                          <li key={i} className="font-medium text-yellow-700">
+                            {item}
                           </li>
                         ))}
                       </ul>
@@ -411,8 +480,8 @@ export default function AboutPage() {
                     <div>
                       <h4 className="font-medium text-black mb-2">身につけたスキル</h4>
                       <div className="flex flex-wrap gap-1">
-                        {exp.skills.map((skill) => (
-                          <Badge key={skill} variant="secondary" className="text-xs">
+                        {achievement.skills.map((skill) => (
+                          <Badge key={skill} variant="secondary" className="text-xs bg-yellow-100 text-yellow-800">
                             {skill}
                           </Badge>
                         ))}
@@ -427,7 +496,7 @@ export default function AboutPage() {
 
         {/* Strengths & Weaknesses */}
         <div
-          className={`mb-16 transition-all duration-1000 delay-800 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`mb-16 transition-all duration-1000 delay-900 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <div className="grid md:grid-cols-2 gap-8">
             {/* Strengths */}
@@ -486,7 +555,7 @@ export default function AboutPage() {
 
         {/* Future Vision */}
         <Card
-          className={`bg-gradient-to-r from-gray-900 to-black text-white shadow-2xl transition-all duration-1000 delay-900 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`bg-gradient-to-r from-gray-900 to-black text-white shadow-2xl transition-all duration-1000 delay-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <CardContent className="p-8 text-center">
             <Heart className="w-12 h-12 mx-auto mb-4 text-red-400" aria-hidden="true" />
