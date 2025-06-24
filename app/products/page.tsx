@@ -51,7 +51,7 @@ export default function ProductsPage() {
       title: "Gravity Four",
       description: "重力付き四目並べゲーム",
       longDescription:
-        "コマが下から積み上がる重力のルールを再現し、縦・横・斜めのいずれかに4つ揃えたプレイヤーが勝利となる対戦型の重力付き四目並べゲームを開発しました。初めての個人開発プロジェクトとして、ゲームロジックから勝敗判定まで全て実装。",
+        "コマが下から積み上がる重力のルールを再現し、縦・横・斜めのいずれかに4つ揃えたプレイヤーが勝利となる対戦型の重力付き四目並べゲームを開発しました。初めての個人開発プロダクトとして、ゲームロジックから勝敗判定まで全て実装。",
       technologies: ["初開発", "Java", "ゲームロジック"],
       image: "/GravityFour.png",
       demoUrl: "#",
@@ -91,6 +91,21 @@ export default function ProductsPage() {
       status: "研究完了",
       role: "研究全般（企画・設計・実装・論文執筆）",
       teamSize: "個人研究",
+    },
+    {
+      id: 6,
+      title: "りふぁまる",
+      description: "研究室指定参考文献形式変換ツール",
+      longDescription:
+        "研究報告、論文、書籍、URLを簡単に研究室指定の参考文献形式に変換することができるツールです。現在、Supabaseを用いて参考文献管理機能を開発中で、直感的なUIとコンポーネント指向の設計を重視しています。",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase"],
+      image: "/refamaru.png",
+      demoUrl: "https://references-xi.vercel.app/",
+      githubUrl: "#",
+      developmentTime: "1ヶ月",
+      status: "開発中",
+      role: "個人開発（全機能設計・実装）",
+      teamSize: "個人開発",
     },
   ]
 
@@ -162,7 +177,7 @@ export default function ProductsPage() {
               <div className="relative overflow-hidden">
                 <img
                   src={product.image || "/placeholder.svg"}
-                  alt={`${product.title}のプロジェクト画像`}
+                  alt={`${product.title}のプロダクト画像`}
                   className="w-full h-48 object-contain bg-gray-50 group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                   width={300}
@@ -272,7 +287,7 @@ export default function ProductsPage() {
               href="https://github.com/hiroto333"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHubでより多くのプロジェクトを見る（新しいタブで開く）"
+              aria-label="GitHubでより多くのプロダクトを見る（新しいタブで開く）"
               className="inline-flex items-center"
             >
               <Github className="w-5 h-5 mr-2" aria-hidden="true" />

@@ -16,10 +16,10 @@ export default function ProductDetailPage() {
   const productDetails = {
     "1": {
       title: "PUMP",
-      description: "検索リンクメモ管理システム",
+      description: "Chrome拡張機能　PUMP -PopUpMemoPad-",
       longDescription:
-        "検索リンクごとにメモを記録し、リンクにカーソルを合わせるだけで内容をポップアップ表示。メモは「必要／不必要」で分類でき、必要なリンクには緑色、不必要なリンクには赤色の下線が表示され、視覚的に情報を整理できるChrome拡張機能です。サポーターズ主催のハッカソン（技育CAMP Vol.23 2024年度）で最優秀賞を受賞しました。",
-      technologies: ["JavaScript", "HTML/CSS", "Chrome Extension API", "DOM操作", "Web Scraping"],
+        "検索リンクごとにメモを記録し、リンクにカーソルを合わせるだけで内容をポップアップ表示。メモは「必要／不必要」で分類でき、必要なリンクには緑色、不必要なリンクには赤色の下線が表示され、視覚的に情報を整理できます。",
+      technologies: ["JavaScript", "HTML/CSS", "Chrome Extension", "DOM操作"],
       image: "/Pump.png",
       demoUrl: "#",
       githubUrl: "#",
@@ -54,10 +54,10 @@ export default function ProductDetailPage() {
     },
     "2": {
       title: "Trive",
-      description: "旅行プラン作成アプリ",
+      description: "ドライブ旅行支援サイト　Trive -Trip&Drive-",
       longDescription:
-        "ユーザーが行きたい市区町村を選択すると地図上に観光スポットがピンで表示され、訪れたい場所を保存できます。各スポットに滞在時間を入力すると、効率的なルートと所要時間が自動で表示され、旅行のしおりの基礎となるプラン（訪問順、滞在時間、移動時間）を作成できるWebアプリケーションです。",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Google Maps API", "JavaScript"],
+        "ユーザーが行きたい市区町村を選択すると地図上に観光スポットがピンで表示され、訪れたい場所を保存できます。各スポットに滞在時間を入力すると、効率的なルートと所要時間が自動で表示され、旅行のしおりの基礎となるプランを作成できます。",
+      technologies: ["JavaScript", "HTML/CSS", "Google Maps API", "Firebase"],
       image: "/Trive.png",
       demoUrl: "#",
       githubUrl: "#",
@@ -93,8 +93,8 @@ export default function ProductDetailPage() {
       title: "Gravity Four",
       description: "重力付き四目並べゲーム",
       longDescription:
-        "コマが下から積み上がる重力のルールを再現し、縦・横・斜めのいずれかに4つ揃えたプレイヤーが勝利となる対戦型の重力付き四目並べゲームです。初めての個人開発プロジェクトとして、ゲームロジックから勝敗判定、UI設計まで全て一人で実装しました。",
-      technologies: ["JavaScript", "HTML5 Canvas", "CSS", "ゲームロジック", "アルゴリズム"],
+        "コマが下から積み上がる重力のルールを再現し、縦・横・斜めのいずれかに4つ揃えたプレイヤーが勝利となる対戦型の重力付き四目並べゲームを開発しました。初めての個人開発プロダクトとして、ゲームロジックから勝敗判定まで全て実装。",
+      technologies: ["初開発", "Java", "ゲームロジック"],
       image: "/GravityFour.png",
       demoUrl: "#",
       githubUrl: "#",
@@ -111,7 +111,6 @@ export default function ProductDetailPage() {
         "段階的な学習アプローチで基礎から習得",
         "重力付き四目並べの独自ルール設計",
         "効率的な勝敗判定アルゴリズムの実装",
-        "HTML5 Canvasを活用した滑らかなアニメーション",
       ],
       learnings: [
         "プログラミングの楽しさと達成感",
@@ -127,11 +126,11 @@ export default function ProductDetailPage() {
       ],
     },
     "4": {
-      title: "子どもの「やってみたい」アプリ",
+      title: "子どもの「やってみたい」が溢れて，それを叶えられるアプリ",
       description: "子ども向け体験マッチングプラットフォーム",
       longDescription:
-        "子どもがショート動画で体験内容を見て「いいね」すると、親に通知が届き、関連する体験イベントが提示されます。気になった体験は保存でき、サブスクリプションに加入すると割引価格で参加可能です。体験提供企業からの広告費を割引原資とし、運営はサブスク収益を得るビジネスモデルです。和歌山大学学生挑戦コンテスト2024 ビジネス部門で企業賞を受賞しました。",
-      technologies: ["ビジネスモデル設計", "UI/UX設計", "収益計画", "プレゼンテーション", "市場分析"],
+        "子どもがショート動画で体験内容を見て「いいね」すると、親に通知が届き、関連する体験イベントが提示されます。気になった体験は保存でき、サブスクリプションに加入すると割引価格で参加可能です。体験提供企業からの広告費を割引原資とするビジネスモデル。",
+      technologies: ["ビジネスモデル設計", "UI/UX設計", "収益計画", "プレゼンテーション"],
       image: "/child.png",
       demoUrl: "#",
       githubUrl: "#",
@@ -166,10 +165,10 @@ export default function ProductDetailPage() {
     },
     "5": {
       title: "非常持ち出し袋支援システム",
-      description: "災害対策支援研究プロジェクト",
+      description: "対応不可な状況の提示による非常持ち出し袋作成支援システムの開発",
       longDescription:
-        "ユーザーが作成した非常持ち出し袋では対応できない状況をシステムが提示することで、未考慮の状況に気づきを与える支援システムを提案しました。非常持ち出し袋の選定では、限られた重量内で個人に合った適切な物を選ぶ必要がありますが、物品の種類が膨大で本当に必要なものを判断するのは難しい現状があります。本研究では、この課題に対する新しいアプローチを提案しました。",
-      technologies: ["研究手法", "システム設計", "ユーザビリティ評価", "論文執筆", "データ分析"],
+        "ユーザーが作成した非常持ち出し袋では対応できない状況をシステムが提示することで、未考慮の状況に気づきを与える支援システムを提案しました。限られた重量内で個人に合った適切な物を選ぶ支援を行います。",
+      technologies: ["JavaScript", "HTML/CSS", "Firebase", "研究"],
       image: "/kenkyu1.png",
       demoUrl: "#",
       githubUrl: "#",
@@ -179,15 +178,9 @@ export default function ProductDetailPage() {
       challenges: [
         "非常持ち出し袋作成に正解がない中での支援方法の模索",
         "ユーザーに自然に考えてもらう仕組みの設計",
-        "災害シナリオの網羅的な分析",
         "システムの有効性評価方法の確立",
       ],
-      solutions: [
-        "未考慮状況の提示による気づき支援アプローチ",
-        "個人の状況に応じたカスタマイズ機能",
-        "段階的な学習支援システムの設計",
-        "ユーザビリティテストによる検証",
-      ],
+      solutions: ["未考慮状況の提示による気づき支援アプローチ", "ユーザビリティテストによる検証"],
       learnings: [
         "論理的思考力の向上",
         "研究手法とプロセスの理解",
@@ -195,6 +188,44 @@ export default function ProductDetailPage() {
         "学術的な文章作成スキル",
       ],
       results: ["新しい災害対策支援手法の提案", "研究論文の完成", "論理的思考力の大幅な向上", "社会課題解決への貢献"],
+    },
+    "6": {
+      title: "りふぁまる",
+      description: "研究室指定参考文献形式変換ツール",
+      longDescription:
+        "研究報告、論文、書籍、URLを簡単に研究室指定の参考文献形式に変換することができるツールです。団内ハッカソンでの個人開発プロジェクトとして開始し、現在Supabaseを用いて参考文献管理機能を開発中です。アジャイル開発手法を採用し、基本的な変換機能が完成次第、研究室で実際に使ってもらう予定です。",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase"],
+      image: "/refamaru.png",
+      demoUrl: "https://references-xi.vercel.app/",
+      githubUrl: "#",
+      developmentTime: "1ヶ月（開発継続中）",
+      teamSize: "個人開発",
+      role: "全機能の設計・実装（企画、UI/UX、フロントエンド、バックエンド）",
+      challenges: [
+        "一から技術を学びながらの開発",
+        "バージョンの違いによるエラーの解決",
+        "SPAの必要性の判断と実装",
+        "モダンな技術スタックの習得",
+      ],
+      solutions: [
+        "Next.js、TypeScript、Tailwind CSS、shadcn/uiの技術選定",
+        "公式ドキュメントを活用した効率的な学習",
+        "直感的に分かりやすいUIの設計（shadcnで統一）",
+        "コンポーネント指向を意識した開発",
+        "アジャイル開発による早期フィードバックの獲得",
+      ],
+      learnings: [
+        "モダンなフロントエンド技術の習得",
+        "コンポーネント指向設計の重要性",
+        "ユーザーフィードバックを活用した開発手法",
+        "技術選定の判断基準",
+      ],
+      results: [
+        "直感的で使いやすいUI/UXの実現",
+        "基本的な参考文献変換機能の完成",
+        "Vercelでのデプロイとライブデモの公開",
+        "研究室での実用化に向けた準備完了",
+      ],
     },
   }
 
@@ -213,7 +244,7 @@ export default function ProductDetailPage() {
       <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-black mx-auto mb-4" />
-          <p className="text-gray-600">プロジェクト詳細を読み込み中...</p>
+          <p className="text-gray-600">プロダクト詳細を読み込み中...</p>
         </div>
       </div>
     )
@@ -224,11 +255,11 @@ export default function ProductDetailPage() {
       <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-black mb-4">404</h1>
-          <p className="text-gray-600 mb-8">プロジェクトが見つかりませんでした</p>
+          <p className="text-gray-600 mb-8">プロダクトが見つかりませんでした</p>
           <Link href="/products">
             <Button className="bg-black text-white hover:bg-gray-800">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              プロジェクト一覧に戻る
+              プロダクト一覧に戻る
             </Button>
           </Link>
         </div>
@@ -246,7 +277,7 @@ export default function ProductDetailPage() {
             className="mb-8 border-gray-300 text-gray-600 hover:bg-gray-50 hover:scale-105 transition-all duration-200"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            プロジェクト一覧に戻る
+            プロダクト一覧に戻る
           </Button>
         </Link>
 
@@ -303,6 +334,8 @@ export default function ProductDetailPage() {
             <Button
               size="lg"
               className="bg-black text-white hover:bg-gray-800 hover:scale-105 transition-all duration-300 flex-1"
+              onClick={() => window.open(product.demoUrl, "_blank")}
+              disabled={product.demoUrl === "#"}
             >
               <ExternalLink className="w-5 h-5 mr-2" />
               ライブデモを見る
@@ -311,6 +344,8 @@ export default function ProductDetailPage() {
               variant="outline"
               size="lg"
               className="border-black text-black hover:bg-gray-50 hover:scale-105 transition-all duration-300 flex-1"
+              onClick={() => window.open(product.githubUrl, "_blank")}
+              disabled={product.githubUrl === "#"}
             >
               <Github className="w-5 h-5 mr-2" />
               ソースコードを見る
@@ -323,7 +358,7 @@ export default function ProductDetailPage() {
           {/* Overview */}
           <Card className="bg-white border-gray-200 shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl text-black">プロジェクト概要</CardTitle>
+              <CardTitle className="text-2xl text-black">プロダクト概要</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 leading-relaxed mb-6">{product.longDescription}</p>
@@ -424,14 +459,14 @@ export default function ProductDetailPage() {
 
         {/* Next Project */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-black mb-6">他のプロジェクトも見る</h3>
+          <h3 className="text-2xl font-bold text-black mb-6">他のプロダクトも見る</h3>
           <Link href="/products">
             <Button
               size="lg"
               variant="outline"
               className="border-black text-black hover:bg-gray-50 hover:scale-105 transition-all duration-300"
             >
-              すべてのプロジェクトを見る
+              すべてのプロダクトを見る
             </Button>
           </Link>
         </div>
