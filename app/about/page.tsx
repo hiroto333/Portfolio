@@ -36,7 +36,6 @@ export default function AboutPage() {
     { name: "Java", level: 4, category: "Language" },
     { name: "HTML/CSS", level: 5, category: "Frontend" },
     { name: "Tailwind CSS", level: 3, category: "Frontend" },
-    { name: "Node.js", level: 1, category: "Backend" },
     { name: "Python", level: 1, category: "Language" },
     { name: "Git", level: 4, category: "Tools" },
   ]
